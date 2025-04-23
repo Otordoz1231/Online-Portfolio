@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Online Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <ul>
+      <li><a href="#personal-info">Personal Info</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact-info">Contact Information</a></li>
+      <li><a href="#my-websites">My Websites</a></li>
+    </ul>
+  </nav>
+
+  <!-- PERSONAL INFO SECTION -->
+  <header class="header" id="personal-info">
+    <img src="black.png" alt="Profile Picture" class="profile-pic" />
+    <h1 class="typing" id="typing"></h1>
+    <p class="title">Web Developer | Java Programmer | Tech Enthusiast</p>
+    <p class="bio fade-in">
+      Hello! I'm a developer who enjoys creating responsive websites, solving real-world problems through code,
+      and building Java applications. Check out my projects below!
+    </p>
+  </header>
+
+  <!-- PROJECTS SECTION -->
+  <section id="Vitae/Viatae/html" class="projects-container fade-in">
+    <h2>Projects</h2>
+    <a href="Vitae/Vitae.html" class="project-link">
+        <div class="project">
+          <h3>Curriculum Vitae</h3>
+          <p>A simple Curriculum Vitae coded</p>
+        </div>
+      </a>      
+      <a href="Aboutme/Aboutme.html" class="project-link">
+        <div class="project">
+          <h3>About Me</h3>
+          <p>A simple website that talks about myself</p>
+        </div>
+      </a>      
+
+    </a>      
+    <a href="Belong/Ibelong.html" class="project-link">
+      <div class="project">
+        <h3>I Belong</h3>
+        <p>A simple code that uses coordinates to hyperlink person's websites</p>
+      </div>
+    </a>      
+  </section>
+
+  <!-- CONTACT INFORMATION SECTION -->
+  <section class="contact-section fade-in" id="contact-info">
+    <h2>Contact Information</h2>
+    <ul>
+      <li>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></li>
+      <li>Phone: +123 456 7890</li>
+      <li>Facebook: <a href="https://facebook.com/yourusername" target="_blank">facebook.com/yourusername</a></li>
+      <li>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
+      <li>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></li>
+    </ul>
+  </section>
+
+  <!-- WEBSITE LINKS SECTION -->
+  <section class="links-section fade-in" id="my-websites">
+    <h2>My Websites</h2>
+    <ul>
+      <li><a href="https://yourstore.com" target="_blank">Jewelry Shop</a></li>
+      <li><a href="https://yourblog.com" target="_blank">Tech Blog</a></li>
+      <li><a href="https://portfolio.com" target="_blank">Alternate Portfolio</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Typing Effect Script
+    const element = document.getElementById("typing");
+    const phrases = ["Hello, I'm Your Name", "From University of Bohol", "A web developer"];
+    let phraseIndex = 0;
+    let letterIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+      const currentPhrase = phrases[phraseIndex];
+      const currentText = currentPhrase.substring(0, letterIndex);
+      element.textContent = currentText;
+
+      if (!isDeleting && letterIndex < currentPhrase.length) {
+        letterIndex++;
+        setTimeout(type, 100);
+      } else if (isDeleting && letterIndex > 0) {
+        letterIndex--;
+        setTimeout(type, 50);
+      } else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) {
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+        }
+        setTimeout(type, 1000);
+      }
+    }
+
+    type();
+
+    // Intersection Observer for fade-in effect
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    fadeElements.forEach(element => {
+      observer.observe(element);
+    });
+  </script>
+</body>
+</html>

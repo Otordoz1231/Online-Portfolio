@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="About Me Page" />
+  <title>About Me</title>
+  <style>
+    body {
+      background-color: pink;
+      background-image: url('BRAWN.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .content-container {
+      background-color: white;
+      width: 80%;
+      max-width: 900px;
+      min-height: 100vh;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+      margin: 20px 0;
+    }
+
+    img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ff6f91;
+      margin-top: 10px;
+    }
+
+    h1, h2 {
+      color: #d6336c;
+    }
+
+    nav {
+      margin: 10px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      color: #0077b6;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 1.6;
+      margin: 1rem 0;
+    }
+
+    strong {
+      color: #c1121f;
+    }
+
+    em {
+      font-style: italic;
+      color: #495057;
+    }
+
+    cite {
+      font-style: normal;
+      font-weight: bold;
+      color: #2a9d8f;
+    }
+
+    hr {
+      margin: 30px 0;
+      border: none;
+      border-top: 2px solid #ddd;
+    }
+
+    address p {
+      margin: 0.5rem 0;
+    }
+
+    .large-space {
+      margin-top: 50px;
+    }
+
+    .page-break {
+      page-break-before: always;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content-container">
+    <header>
+      <h1><abbr title="This is your personal profile section">ABOUT ME</abbr></h1>
+    </header>
+
+    <nav>
+      <a href="#about">About</a> |
+      <a href="#goals">Goals</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <hr>
+
+    <section id="about">
+      <img src="Aaron.jpg" alt="Aaron's Photo" />
+      <p>
+        I have always been fascinated by computers, especially <strong>online games</strong>. Growing up as an <em>introverted person</em>, I would spend hours playing video games—sometimes an entire day. This hobby led me to love all things related to computers. My favorite quote is <q>“Technology is best when it brings people together.”</q>
+      </p>
+    </section>
+
+    <div class="page-break"></div>
+
+    <section id="goals">
+      <p class="large-space">
+        One of the biggest challenges I faced was overcoming <em>self-doubt</em>. There were times when I questioned my abilities, but through <strong>persistence</strong> and the <strong>support</strong> of those around me, I gained confidence, which led me to pursue <abbr title="Bachelor of Science in Computer Engineering">computer engineering</abbr>.
+      </p>
+      <p>
+        Today, I continue to refine my computer skills, exploring and discovering things that will be helpful throughout this journey. I want to <strong>help people</strong>, build <mark>innovative technology</mark>, and bring my dreams and ideas to life.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Information</h2>
+      <address>
+        <p>Email: <a href="mailto:aaronbrennan226@gmail.com" target="_blank" rel="noopener noreferrer"><cite>aaronbrennan226@gmail.com</cite></a></p>
+        <p>Facebook: <a href="https://www.facebook.com/share/1L2oyVLPcM/" target="_blank" rel="noopener noreferrer"><cite>Aaron Otordoz</cite></a></p>
+        <p>Phone: <a href="tel:+63960870922"><cite>0960870922</cite></a></p>
+      </address>
+    </section>
+
+    <hr>
+
+    <footer class="large-space">
+      <p>&copy; <time datetime="2025">2025</time> Aaron. All rights reserved.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
