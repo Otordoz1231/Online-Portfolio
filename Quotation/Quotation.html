@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Points to Ponder</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Arial', sans-serif;
+      background: url('fenk.gif') no-repeat center center fixed;
+      background-size: cover;
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    .main-layout {
+      display: flex;
+      min-height: 100vh;
+      padding: 20px;
+      gap: 10px;
+    }
+
+    .vertical-bar {
+      width: 100px;
+      background: url('purpol.gif') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    .vertical-title {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      padding: 20px 5px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .quotes-container {
+      flex-grow: 1;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      border-radius: 10px;
+    }
+
+    .quote {
+      background-color: rgba(255, 255, 255, 0.3); /* transparent white */
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      font-size: 15px;
+      line-height: 1.5em;
+      transition: transform 0.3s ease;
+      backdrop-filter: blur(2px);
+    }
+
+    .quote:hover {
+      transform: translateY(-5px);
+    }
+
+    .quote small {
+      display: block;
+      margin-top: 10px;
+      font-style: italic;
+      text-align: right;
+      color: #444;
+    }
+
+    .quote::first-letter {
+      color: #6b4aff;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .main-layout {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .vertical-bar {
+        flex-direction: row;
+        width: auto;
+        height: 80px;
+        writing-mode: initial;
+        padding: 10px;
+      }
+
+      .vertical-title {
+        transform: rotate(0deg);
+        writing-mode: horizontal-tb;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-layout">
+    <div class="vertical-bar">
+      <div class="vertical-title">POINTS TO PONDER</div>
+    </div>
+
+    <div class="quotes-container">
+      <div class="quote">To say I love you one must first know how to say the I<small>- Ayn Rand</small></div>
+      <div class="quote">How you love yourself is how you teach others to love you<small>- Rupi Kaur</small></div>
+      <div class="quote">If everybody were like everybody else, how boring it would be<small>- Winnie the Pooh</small></div>
+      <div class="quote">When youre different, all you notice is the person who doesnt accept you<small>- Jodi Picoult</small></div>
+      <div class="quote">I wish to be happy, but it must be in my own way<small>- Jane Austen</small></div>
+      <div class="quote">Hating our bodies is something we learn; we can unlearn it<small>- B. F. Skinner</small></div>
+      <div class="quote">Im a woman. Phenomenally. Phenomenal woman, thats me<small>- Maya Angelou</small></div>
+      <div class="quote">You should never be surprised when someone treats you with respect<small>- Sarah Dessen</small></div>
+      <div class="quote">I really dont care what people think about me. I believe in myself<small>- Samantha Montgomery</small></div>
+      <div class="quote">After a while, you learn to ignore the names people call you<small>- Shrek</small></div>
+      <div class="quote">Power. I have it. They dont. That bothers them<small>- Buffy</small></div>
+      <div class="quote">How you take care of yourself is how the world sees you<small>- Jonathan Van Ness</small></div>
+      <div class="quote">Beauty begins the moment you decide to be yourself<small>- Coco Chanel</small></div>
+      <div class="quote">Believe you can and youre halfway there<small>- Theodore Roosevelt</small></div>
+      <div class="quote">No one can make you feel inferior without your consent<small>- Eleanor Roosevelt</small></div>
+      <div class="quote">You are enough just as you are<small>- Meghan Markle</small></div>
+      <div class="quote">Self-care is how you take your power back<small>- Lalah Delia</small></div>
+      <div class="quote">Be yourself; everyone else is already taken<small>- Oscar Wilde</small></div>
+      <div class="quote">Do not wait for someone else to come and speak for you. It is you who can change the world<small>- Malala Yousafzai</small></div>
+      <div class="quote">You alone are enough. You have nothing to prove to anybody<small>- Maya Angelou</small></div>
+    </div>
+  </div>
+
+</body>
+</html>
