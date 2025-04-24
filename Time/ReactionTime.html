@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reaction Time Game</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding-top: 100px; background: #eee; }
+    #box {
+      width: 300px; height: 300px; background: red;
+      margin: auto; border-radius: 10px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Reaction Time Game</h1>
+  <p>Click the box **as soon as it turns green**!</p>
+  <div id="box">Wait...</div>
+  <p id="result"></p>
+
+  <script>
+    let startTime, timer;
+    const box = document.getElementById("box");
+
+    function showBox() {
+      box.style.background = "green";
+      box.textContent = "CLICK!";
+      startTime = Date.now();
+    }
+
+    box.onclick = function () {
+      if (box.style.background === "green") {
+        const reaction = (Date.now() - startTime) / 1000;
+        document.getElementById("result").textContent = `Your time: ${reaction}s`;
+        reset();
+      }
+    };
+
+    function reset() {
+      box.style.background = "red";
+      box.textContent = "Wait...";
+      setTimeout(showBox, Math.random() * 3000 + 1000);
+    }
+
+    reset();
+  </script>
+</body>
+</html>

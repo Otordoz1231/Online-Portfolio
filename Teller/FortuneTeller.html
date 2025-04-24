@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fortune Teller</title>
+  <style>
+    body { background: #222; color: #fff; text-align: center; padding-top: 100px; font-family: 'Courier New', monospace; }
+    button { padding: 15px 30px; font-size: 18px; background: purple; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    #fortune { margin-top: 20px; font-size: 24px; }
+  </style>
+</head>
+<body>
+  <h1>🔮 Mystic Fortune Teller</h1>
+  <button onclick="getFortune()">Reveal My Fortune</button>
+  <div id="fortune"></div>
+
+  <script>
+    const fortunes = [
+      "You will find what you seek very soon.",
+      "An unexpected opportunity will come your way.",
+      "Today is a great day to try something new.",
+      "A friend will surprise you with good news.",
+      "Your creativity will lead you to success.",
+      "Something lucky is just around the corner."
+    ];
+
+    function getFortune() {
+      const random = fortunes[Math.floor(Math.random() * fortunes.length)];
+      document.getElementById("fortune").textContent = random;
+    }
+  </script>
+</body>
+</html>
